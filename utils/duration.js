@@ -1,6 +1,6 @@
-const { performance } = require('perf_hooks')
+import { performance } from 'perf_hooks'
 
-class Duration {
+export default class Duration {
   startTime
   endTime
 
@@ -19,5 +19,3 @@ class Duration {
     return (this.endTime - this.startTime).toFixed(precision)
   }
 }
-
-module.exports.default = Duration

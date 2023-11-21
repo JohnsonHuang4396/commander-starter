@@ -2,7 +2,7 @@
   "watch": ["src"],
   "ignore": ["src/**/*/*.test.ts"],
   "ext": "ts,mjs,js,json",
-  "exec": "etsc --config=etsc.config.js && node ./dist/main.js",
+  "exec": "etsc --config=etsc.config.mjs && node ./dist/main.js",
   "legacyWatch": true,
   "delay": 2000
 }

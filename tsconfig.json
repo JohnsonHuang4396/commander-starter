@@ -2,7 +2,6 @@
   "compilerOptions": {
     "target": "ESNext",
     "module": "ESNext",
-    "moduleResolution": "node",
     "baseUrl": "./",
     "outDir": "./dist",
     "isolatedModules": true,

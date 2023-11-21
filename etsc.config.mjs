@@ -1,13 +1,13 @@
 const log = console.log
-const Duration = require('./utils/duration').default
+import Duration from './utils/duration.js'
+import template from 'chalk-template'
 
-module.exports = {
+export default {
   esbuild: {
     minify: false,
     target: 'es2015'
   },
   prebuild: async () => {
-    const template = (await import('chalk-template')).default
     log(template`🚶 {red Prebuild} stage running...`)
     Duration.start()
 
@@ -17,7 +17,6 @@ module.exports = {
     log(template`👍 {red Prebuild} stage done! Took {green ${runtTime}}s`)
   },
   postbuild: async () => {
-    const template = (await import('chalk-template')).default
     log(template`🏃 {blue Postbuild} stage running...`)
     Duration.start()
 

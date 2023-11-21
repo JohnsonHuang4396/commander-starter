@@ -1,5 +1,6 @@
 {
   "name": "commander-starter",
+  "type": "module",
   "description": "A starter helps everyone has own commander😎",
   "version": "0.0.0",
   "author": "JohnsonHuang4396",
