@@ -1,30 +1,29 @@
+const log = console.log
+const Duration = require('./utils/duration').default
+
 module.exports = {
   esbuild: {
     minify: false,
     target: 'es2015'
   },
   prebuild: async () => {
-    const { performance } = require('perf_hooks')
-    const chalk = (await import('chalk')).default
-    console.log(`🚶 ${chalk.red('Prebuild')} stage running...`)
-    const startTime = performance.now()
+    const template = (await import('chalk-template')).default
+    log(template`🚶 {red Prebuild} stage running...`)
+    Duration.start()
 
     /* do some prebuild job */
 
-    const endTime = performance.now()
-    const runtTime = endTime - startTime
-    console.log(`👍 ${chalk.red('Prebuild')} stage done! Took ${runtTime}s`)
+    const runtTime = Duration.end()
+    log(template`👍 {red Prebuild} stage done! Took {green ${runtTime}}s`)
   },
   postbuild: async () => {
-    const { performance } = require('perf_hooks')
-    const chalk = (await import('chalk')).default
-    console.log(`🏃 ${chalk.blue('Postbuild')} stage running...`)
-    const startTime = performance.now()
+    const template = (await import('chalk-template')).default
+    log(template`🏃 {blue Postbuild} stage running...`)
+    Duration.start()
 
     /* do some postbuild job */
 
-    const endTime = performance.now()
-    const runtTime = endTime - startTime
-    console.log(`👍 ${chalk.blue('Postbuild')} stage done! Took ${runtTime}s`)
+    const runtTime = Duration.end()
+    log(template`👍 {blue Postbuild} stage done! Took {green ${runtTime}}s`)
   }
 }
