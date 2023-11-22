@@ -11,13 +11,13 @@
     "strictNullChecks": true,
     "resolveJsonModule": true,
     "paths": {
-      "@/*": ["./src/*"]
+      "@/*": ["./bin/*"]
     }
   },
   "ts-node": {
     "esm": true,
     "experimentalSpecifierResolution": "node"
   },
-  "include": ["src/**/*.ts"],
+  "include": ["bin/**/*.ts", "bin/main.ts"],
   "exclude": ["node_modules"]
 }

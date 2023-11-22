@@ -1,8 +1,8 @@
 {
-  "watch": ["src"],
-  "ignore": ["src/**/*/*.test.ts"],
+  "watch": ["bin"],
+  "ignore": ["bin/**/*/*.test.ts"],
   "ext": "ts,mjs,js,json",
-  "exec": "node ./utils/reload.js",
+  "exec": "pnpm build",
   "legacyWatch": true,
   "delay": 2000
 }

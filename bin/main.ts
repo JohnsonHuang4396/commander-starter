@@ -1,14 +1,14 @@
-import fs from 'fs-extra'
+#!/usr/bin/env node
+
+import pkg from '../package.json' assert { type: 'json' }
 import path from 'node:path'
 import { program as creator } from 'commander'
 import { installProgram } from './utils/install.js'
 
-const { version } = await fs.readJSON('./package.json')
-
 const dirname = new URL('.', import.meta.url).pathname.replace(/\/*/, '')
 
 async function initProgram() {
-  creator.version(version)
+  creator.version(pkg.version)
 
   /* Auto load modules from src dir, and register in program */
   const programList = await installProgram(path.join(dirname, './commands'))
