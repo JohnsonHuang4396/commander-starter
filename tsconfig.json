@@ -1,13 +1,18 @@
 {
   "compilerOptions": {
     "target": "ESNext",
-    "module": "ESNext",
+    "module": "NodeNext",
+    "moduleResolution": "NodeNext",
     "baseUrl": "./",
     "outDir": "./dist",
     "isolatedModules": true,
     "esModuleInterop": true,
     "forceConsistentCasingInFileNames": true,
-    "strictNullChecks": true
+    "strictNullChecks": true,
+    "resolveJsonModule": true,
+    "paths": {
+      "@/*": ["./src/*"]
+    }
   },
   "ts-node": {
     "esm": true,

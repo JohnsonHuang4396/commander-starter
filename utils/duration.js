@@ -16,6 +16,6 @@ export default class Duration {
 
   static end(precision = 2) {
     this.endTime = performance.now()
-    return (this.endTime - this.startTime).toFixed(precision)
+    return ((this.endTime - this.startTime) / 1000).toFixed(precision)
   }
 }
