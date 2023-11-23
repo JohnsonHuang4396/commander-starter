@@ -1,3 +1,3 @@
-**<center>Commander Starter</center>**
+# <div align="center">Commander Starter</div>
 
-<center>A starter helps everyone has own commander😎</center>
+**<div align="center">A starter helps everyone has own commander😎</div>**
