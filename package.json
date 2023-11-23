@@ -11,8 +11,13 @@
     "template"
   ],
   "bin": {
-    "starter": "bin/main.js"
+    "starter": "dist/main.js"
   },
+  "files": [
+    "dist/",
+    "README.md",
+    "package.json"
+  ],
   "scripts": {
     "dev": "nodemon",
     "build": "node ./utils/reload.js",
